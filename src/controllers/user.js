@@ -19,6 +19,9 @@ exports.addUsers = async (req, res) => {
 
 exports.getUsers = async (req, res) => {
   try {
+
+    // const idUser = req.user.id
+
     const users = await user.findAll({
       include: {
         model: profile,
